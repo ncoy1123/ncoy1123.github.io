@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html>
 <head>
 	<meta charset="UTF-8">
@@ -7,33 +6,39 @@
 	<link rel="stylesheet" href="style.css">
 </head>
 <body>
-	<h1>Math Stress Test</h1>
-	<button onclick="runSingleTest()">Single Test</button>
-	<button onclick="runFiveMinuteTest()">5 Minute Test</button>
-	<p class="score" id="score"></p>
+	<header>
+		<h1>Math Stress Test</h1>
+	</header>
+	<main>
+		<section>
+			<button onclick="runSingleTest()">Single Test</button>
+			<button onclick="runFiveMinuteTest()">5 Minute Test</button>
+			<p class="score" id="score"></p>
+		</section>
+	</main>
 	<script>
 		function runSingleTest() {
-        // Start timer
-        var start = performance.now();
+			// Start timer
+			var start = performance.now();
 
-        // Generate and solve 5 million math problems
-        var numProblems = 1000000;
-        for (var i = 0; i < numProblems; i++) {
-          var num1 = Math.floor(Math.random() * 100);
-          var num2 = Math.floor(Math.random() * 100);
-          var op = Math.random() < 0.5 ? "+" : "-";
-          var answer = eval(num1 + op + num2);
-        }
+			// Generate and solve 5 million math problems
+			var numProblems = 1000000;
+			for (var i = 0; i < numProblems; i++) {
+				var num1 = Math.floor(Math.random() * 100);
+				var num2 = Math.floor(Math.random() * 100);
+				var op = Math.random() < 0.5 ? "+" : "-";
+				var answer = eval(num1 + op + num2);
+			}
 
-        // End timer and calculate score
-        var end = performance.now();
-        var time = end - start;
-        var score = Math.round(numProblems / (time/1000));
+			// End timer and calculate score
+			var end = performance.now();
+			var time = end - start;
+			var score = Math.round(numProblems / (time/1000));
 
-        // Update score on page
-        var scoreElement = document.getElementById("score");
-        scoreElement.innerHTML = "Your score: " + score + " problems per second";
-      }
+			// Update score on page
+			var scoreElement = document.getElementById("score");
+			scoreElement.innerHTML = "Your score: " + score + " problems per second";
+		}
 
 		function runFiveMinuteTest() {
 			var startTime = Date.now();
@@ -50,4 +55,3 @@
 	</script>
 </body>
 </html>
-
