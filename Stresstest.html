@@ -13,6 +13,7 @@
 
     			<button onclick="runSingleTest()">Single Test</button>
 			<button onclick="runFiveMinuteTest()">5 Minute Test</button>
+			<button onclick="Bigboy()">Long Test</button>
 			 <p class="score" id="score"></p>
 
 
@@ -54,6 +55,15 @@
 			var timeElapsed = (endTime - startTime) / 1000;
 			var score = (numProblems / timeElapsed).toFixed(2);
 			document.getElementById("score").innerHTML = "Your score: " + score + " problems per second";
+		}
+		
+		function Bigboy() {
+			var startTime = Date.now();
+			var numProblems = 0;
+			while (true) {
+				Math.sqrt(Math.random());
+				numProblems++;
+			}
 		}
 	</script>
 </body>
