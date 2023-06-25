@@ -8,6 +8,11 @@
       font-family: Arial, sans-serif;
       margin: 0;
       padding: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
     }
     
     h1 {
@@ -15,13 +20,14 @@
     }
     
     .button-container {
-      text-align: center;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 20px;
       margin-top: 50px;
     }
     
     .button {
       display: block;
-      margin-bottom: 20px;
       padding: 10px 20px;
       background-color: #4CAF50;
       color: white;
@@ -30,12 +36,17 @@
       border-radius: 4px;
       cursor: pointer;
       font-size: 16px;
-      text-align: left;
-      width: 300px;
+      width: 100%;
+      text-align: center;
     }
     
     .button:hover {
       background-color: #45a049;
+    }
+    
+    .description-container {
+      text-align: center;
+      margin-top: 50px;
     }
     
     .test-description {
@@ -46,28 +57,33 @@
 <body>
   <h1>Welcome to the Computer Testing Site!</h1>
   
-  <p>This site is designed to be a one-stop shop for testing as many components of a computer as possible, all within your web browser.</p>
-  
   <div class="button-container">
-    <a class="button" href="kbtest.html">
+    <a class="button" href="keyboard-tester.html">Keyboard Tester</a>
+    <a class="button" href="camera-test.html">Camera Test</a>
+    <a class="button" href="stress-test.html">Stress Test</a>
+    <a class="button" href="all-tests.html">Start All Tests</a>
+  </div>
+  
+  <div class="description-container">
+    <div class="test-description">
       <h3>Keyboard Tester</h3>
-      <p class="test-description">Test the functionality of your keyboard, including key presses, responsiveness, and more.</p>
-    </a>
-    
-    <a class="button" href="camera-test.html">
+      <p>Test the functionality of your keyboard, including key presses, responsiveness, and more.</p>
+    </div>
+  
+    <div class="test-description">
       <h3>Camera Test</h3>
-      <p class="test-description">Check if your camera is working properly by capturing photos and videos, adjusting settings, and testing video conferencing.</p>
-    </a>
+      <p>Check if your camera is working properly by capturing photos and videos, adjusting settings, and testing video conferencing.</p>
+    </div>
     
-    <a class="button" href="Stresstest.html">
+    <div class="test-description">
       <h3>Stress Test</h3>
-      <p class="test-description">Push your computer's hardware to the limits with a stress test to ensure stability and performance under heavy load.</p>
-    </a>
+      <p>Push your computer's hardware to the limits with a stress test to ensure stability and performance under heavy load.</p>
+    </div>
     
-    <a class="button" href="all-tests.html">
+    <div class="test-description">
       <h3>Start All Tests</h3>
-      <p class="test-description">Run all available tests consecutively to comprehensively evaluate the components of your computer.</p>
-    </a>
+      <p>Run all available tests consecutively to comprehensively evaluate the components of your computer.</p>
+    </div>
   </div>
 </body>
 </html>
