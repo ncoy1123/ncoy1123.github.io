@@ -14,10 +14,15 @@
       text-align: center;
     }
     
+    .button-container {
+      text-align: center;
+      margin-top: 50px;
+    }
+    
     .button {
-      display: inline-block;
+      display: block;
+      margin-bottom: 20px;
       padding: 10px 20px;
-      margin: 10px;
       background-color: #4CAF50;
       color: white;
       text-decoration: none;
@@ -25,23 +30,44 @@
       border-radius: 4px;
       cursor: pointer;
       font-size: 16px;
+      text-align: left;
+      width: 300px;
     }
     
     .button:hover {
       background-color: #45a049;
+    }
+    
+    .test-description {
+      margin-bottom: 30px;
     }
   </style>
 </head>
 <body>
   <h1>Welcome to the Computer Testing Site!</h1>
   
-  <p>This site is designed to be a one-stop shop to test as many components of a computer as possible, all within your web browser.</p>
+  <p>This site is designed to be a one-stop shop for testing as many components of a computer as possible, all within your web browser.</p>
   
-  <div>
-    <a class="button" href="all-tests.html">Start All Tests</a>
-    <a class="button" href="kbtest.html">Keyboard Tester</a>
-    <a class="button" href="camera-test.html">Camera Test</a>
-    <a class="button" href="Stresstest.html">Stress Test</a>
+  <div class="button-container">
+    <a class="button" href="kbtest.html">
+      <h3>Keyboard Tester</h3>
+      <p class="test-description">Test the functionality of your keyboard, including key presses, responsiveness, and more.</p>
+    </a>
+    
+    <a class="button" href="camera-test.html">
+      <h3>Camera Test</h3>
+      <p class="test-description">Check if your camera is working properly by capturing photos and videos, adjusting settings, and testing video conferencing.</p>
+    </a>
+    
+    <a class="button" href="Stresstest.html">
+      <h3>Stress Test</h3>
+      <p class="test-description">Push your computer's hardware to the limits with a stress test to ensure stability and performance under heavy load.</p>
+    </a>
+    
+    <a class="button" href="all-tests.html">
+      <h3>Start All Tests</h3>
+      <p class="test-description">Run all available tests consecutively to comprehensively evaluate the components of your computer.</p>
+    </a>
   </div>
 </body>
 </html>
