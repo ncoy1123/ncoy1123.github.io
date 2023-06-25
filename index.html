@@ -1,22 +1,47 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>My Personal Projects</title>
-	<link rel="stylesheet" href="style.css">
+  <title>Computer Testing Site</title>
+  <style>
+    /* CSS styling for the page */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+    }
+    
+    h1 {
+      text-align: center;
+    }
+    
+    .button {
+      display: inline-block;
+      padding: 10px 20px;
+      margin: 10px;
+      background-color: #4CAF50;
+      color: white;
+      text-decoration: none;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+    
+    .button:hover {
+      background-color: #45a049;
+    }
+  </style>
 </head>
 <body>
-	<header>
-		<h1>Projects</h1>
-	</header>
-	<main>
-		<section>
-			<a href="/Stresstest.html">Chromebook Test</a>
-		</section>
-		<section>
-			<a href="/kbtest.htm">Keyboard Test</a>
-		</section>
-	</main>
+  <h1>Welcome to the Computer Testing Site!</h1>
+  
+  <p>This site is designed to be a one-stop shop to test as many components of a computer as possible, all within your web browser.</p>
+  
+  <div>
+    <a class="button" href="keyboard-tester.html">Keyboard Tester</a>
+    <a class="button" href="camera-test.html">Camera Test</a>
+    <a class="button" href="stress-test.html">Stress Test</a>
+    <a class="button" href="all-tests.html">Start All Tests</a>
+  </div>
 </body>
 </html>
