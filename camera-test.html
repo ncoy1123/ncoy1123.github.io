@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Webcam Test</title>
+  <style>
+    /* CSS styling for the page */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+      text-align: center;
+    }
+    
+    h1 {
+      margin-bottom: 20px;
+    }
+    
+    #video-container {
+      display: flex;
+      justify-content: center;
+    }
+    
+    #video {
+      width: 640px;
+      height: 480px;
+      border: 2px solid #000;
+    }
+  </style>
+</head>
+<body>
+  <h1>Webcam Test</h1>
+  
+  <div id="video-container">
+    <video id="video" autoplay></video>
+  </div>
+
+  <script>
+    // JavaScript code to access the webcam and display video
+    navigator.mediaDevices.getUserMedia({ video: true })
+      .then(function(stream) {
+        var videoElement = document.getElementById('video');
+        videoElement.srcObject = stream;
+      })
+      .catch(function(error) {
+        console.error('Error accessing the webcam: ', error);
+      });
+  </script>
+</body>
+</html>
